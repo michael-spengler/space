@@ -3,7 +3,7 @@ import { SpaceExplorer } from "./space-explorer.ts";
 
 Deno.test("get planet by name", async (): Promise<void> => {
 
-    const planet = SpaceExplorer.getPlanetByName('Earth') 
+    const planet = await SpaceExplorer.getPlanetByName('Earth') 
 
     assertEquals(planet.orbitalPeriod, 365.2)
     
@@ -11,7 +11,7 @@ Deno.test("get planet by name", async (): Promise<void> => {
 
 Deno.test("get planets in our solarsystem", async (): Promise<void> => {
 
-    const planets = SpaceExplorer.getPlanetsInOurSolarSystem() 
+    const planets = await SpaceExplorer.getPlanetsInOurSolarSystem() 
 
     assertEquals(planets.length, 9)
     

@@ -1,18 +1,20 @@
-import { readJsonSync } from "https://deno.land/std/fs/mod.ts"
+
+import { Persistence } from "https://deno.land/x/persistence@1.1.0/persistence.ts"
 
 export class SpaceExplorer {
 
+  private static planetsFileId = 'https://raw.githubusercontent.com/michael-spengler/space/master/planets.json'
 
-  public static getPlanetByName(name: string): any {
-    const planets: any[] = (readJsonSync(`${Deno.cwd()}/planets.json`) as any[])
-    
+  public static async getPlanetByName(name: string): Promise<any> {
+    const planets: any[] = await SpaceExplorer.getPlanetsInOurSolarSystem()
+
     return planets.filter((p: any) => p.name === name)[0]
   }
 
 
-  public static getPlanetsInOurSolarSystem(): any[] {
-    
-    return (readJsonSync("./planets.json") as any[])
+  public static async getPlanetsInOurSolarSystem(): Promise<any[]> {
+
+    return JSON.parse(await Persistence.readFromRemoteFile(SpaceExplorer.planetsFileId))
   }
 
 }

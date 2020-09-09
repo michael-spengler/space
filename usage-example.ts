@@ -1,5 +1,5 @@
-import { SpaceExplorer } from "./space-explorer.ts";
+import { SpaceExplorer } from "https://x.nest.land/space@0.2.1/mod.ts";
 
-const planet = SpaceExplorer.getPlanetByName('Earth') 
+const planet = await SpaceExplorer.getPlanetByName('Earth') 
 
 console.log(planet)
