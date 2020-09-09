@@ -6,7 +6,7 @@
 
 ```ts
 
-import { SpaceExplorer } from "https://x.nest.land/space@0.2.1/mod.ts";
+import { SpaceExplorer } from "https://x.nest.land/space@0.2.2/mod.ts";
 
 const planet = await SpaceExplorer.getPlanetByName('Earth') 
 
@@ -18,14 +18,14 @@ console.log(planet)
 ## Trigger Usage Example
 
 ```sh
-deno run --allow-net https://x.nest.land/space@0.2.1/usage-example.ts
+deno run --allow-net https://x.nest.land/space@0.2.2/usage-example.ts
 ```
 
 ## Trigger Test Execution
 
 ```sh
 
-deno test --allow-net https://x.nest.land/space@0.2.1/test.ts
+deno test --allow-net https://x.nest.land/space@0.2.2/test.ts
   
 ```
 
