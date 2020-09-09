@@ -1,0 +1,13 @@
+{
+  "name": "space",
+  "description": "Space Explorer",
+  "stable": true,
+  "files": [
+    "mod.ts",
+    "planets.json",
+    "README.md",
+    "space-explorer.ts",
+    "test.ts",
+    "usage-example.ts"
+  ]
+}
